@@ -1,0 +1,262 @@
+/* global styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-container {
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.input-container i {
+    padding: 1rem;
+}
+
+input[type="text"] {
+    border: none;
+    padding: 1rem;
+    padding-left: 0;
+    background-color: #F3F4F6;
+    min-width: 450px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+/* first sidebar */
+.sidebar {
+    display: flex;
+    height: 100%;
+    background-color: #FFF;
+    border-right: 2px solid #EFF0F3;
+    max-width: 105px;
+}
+
+.sidebar ul {
+    margin: 0.5rem;
+}
+
+.sidebar ul li {
+    list-style: none;
+    padding: 2rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    border-radius: 7px;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar ul li.selected {
+    background-color: #6C5DD3;
+}
+
+.sidebar ul li.selected > i {
+    color: #fff;
+}
+
+.sidebar ul li:not(.selected):hover {
+    background-color: #AAA1E2;
+}
+
+.sidebar ul li i {
+    font-size: 1.5rem;
+    color: #293340;
+}
+
+/* second sidebar*/
+.second-sidebar {
+    border-right: 2px solid #EFF0F3;
+}
+
+.second-sidebar ul {
+    margin-top: 0.5rem;
+}
+
+.second-sidebar ul li {
+    list-style: none;
+    padding: 2rem;
+    font-family: 'Lato', serif;
+    font-size: 1.5rem;
+    height: 92px;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.second-sidebar ul li i {
+    margin-left: 3rem;
+}
+
+.second-sidebar ul li.selected {
+    color: #6C5DD3;
+    background-color: #EEF2FF;
+    border-left: 4px solid #6C5DD3;
+}
+
+.second-sidebar ul li.expanded {
+    align-items: center;
+    display: flex;
+    border-bottom: 2px solid #EFF0F3;
+}
+
+.second-sidebar ul li.expanded span {
+    flex: 1;
+}
+
+.second-sidebar ul li:not(.selected):hover {
+    background-color: #AAA1E2;
+}
+
+/* main section */
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* search bar section */
+.main .search-bar {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main .search-bar-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main .alert {
+    border-radius: 50%;
+    color: #c9c9c9;
+    border: 2px solid #bbbbbb;
+    padding: 1rem;
+}
+
+.main .alert:after {
+    content: '';
+    position: absolute;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: -10px;
+}
+
+.main .profile {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.main .profile img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* content section */
+.main .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #F3F4F6;
+    padding: 1rem;
+}
+
+/* breadcrumb section */
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb li {
+    font-family: 'Lato';
+    color: #6C5DD3;
+    font-weight: 600;
+    list-style: none;
+    font-size: 1.3rem;
+    margin-right: 0.3rem;
+}
+
+.breadcrumb li.selected {
+    color: grey;
+}
+
+.breadcrumb li:after {
+    content: '/';
+    color: grey;
+    margin-left: 0.3rem;
+}
+
+.breadcrumb li:last-child {
+    margin-right: 0;
+}
+
+.breadcrumb li:last-child:after {
+    content: '';
+    margin-left: 0;
+}
+
+.dashboard {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.dashboard > div {
+    flex: 1;
+}
+
+.dashboard .headline {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+
+.dashboard .sublines {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard .sublines .col {
+    flex: 1;
+}
+
+.dashboard .sublines .box {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin: 0 1rem 1rem 0;
+}
+
+.dashboard .sublines .box:last-child {
+    margin-bottom: 0;
+}

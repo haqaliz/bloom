@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="./style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li class="selected"><i class="material-icons">home</i></li>
+                <li><i class="material-icons">business</i></li>
+                <li><i class="material-icons">grass</i></li>
+                <li><i class="material-icons">kitchen</i></li>
+                <li><i class="material-icons">window</i></li>
+                <li><i class="material-icons">shower</i></li>
+            </ul>
+        </div>
+
+        <!-- second sidebar -->
+        <div class="second-sidebar">
+            <ul>
+                <li class="selected">general</li>
+                <li>tools</li>
+                <li>assets</li>
+                <li>products</li>
+                <li>project</li>
+                <li class="expanded">
+                    <span># promotion</span>
+                    <i class="material-icons">add</i>
+                </li>
+                <li class="expanded">
+                    <span># testimontial</span>
+                    <i class="material-icons">add</i>
+                </li>
+                <li class="expanded">
+                    <span># FAQ</span>
+                    <i class="material-icons"> add</i>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <div class="main">
+            <!-- seach bar section -->
+            <div class="search-bar">
+                <div class="search-bar-container">
+                    <div class="input-container">
+                        <i class="material-icons">search</i>
+                        <input type="text" placeholder="Search item, Collection and Account..">
+                    </div>
+                </div>
+                <div class="alert"><i class="material-icons">notifications</i></div>
+                <div class="profile">
+                    <img src="data:image/jpeg;base64,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" alt=""></div>
+            </div>
+
+            <!-- content section -->
+            <div class="content">
+                <!-- breadcrumb section -->
+                <ul class="breadcrumb">
+                  <li>Dashboard</li>
+                  <li class="selected">General</li>  
+                </ul>
+
+                <!-- dashboard section -->
+                <div class="dashboard">
+                    <div class="headline">
+
+                    </div>
+
+                    <div class="sublines">
+                        <div class="col">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <div class="col">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- dashboard content -->
+                <div>third</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
