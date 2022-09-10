@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Lato', serif;
 }
 
 .col {
@@ -12,6 +13,10 @@
 .row {
     display: flex;
     flex-direction: row;
+}
+
+.f1 {
+    flex: 1;
 }
 
 .input-container {
@@ -37,7 +42,11 @@ input[type="text"] {
 .container {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 /* first sidebar */
@@ -93,7 +102,6 @@ input[type="text"] {
 .second-sidebar ul li {
     list-style: none;
     padding: 2rem;
-    font-family: 'Lato', serif;
     font-size: 1.5rem;
     height: 92px;
     cursor: pointer;
@@ -197,7 +205,6 @@ input[type="text"] {
 }
 
 .breadcrumb li {
-    font-family: 'Lato';
     color: #6C5DD3;
     font-weight: 600;
     list-style: none;
@@ -225,7 +232,7 @@ input[type="text"] {
 }
 
 .dashboard {
-    height: 250px;
+    height: 450px;
     display: flex;
     flex-direction: row;
     margin-bottom: 1rem;
@@ -239,6 +246,73 @@ input[type="text"] {
     background-color: #fff;
     border-radius: 0.5rem;
     margin-right: 1rem;
+    padding: 1.5rem;
+}
+
+.dashboard .headline h4.title {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.dashboard .headline .canvas {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    min-width: 370px;
+}
+
+.dashboard .headline .canvas .bar {
+    flex: 1;
+    background-color: #E0E7FF;
+    margin-right: 0.5rem;
+    border-radius: 0.3rem;
+    min-height: 5%;
+}
+
+.dashboard .headline .canvas .bar.selected {
+    position: relative;
+    background-color: #6C5DD3;
+}
+
+.dashboard .headline .canvas .bar.selected span {
+    position: absolute;
+    left: 0;
+    margin-top: -3rem;
+    background-color: #1F2937;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    margin-left: -0.5rem;
+}
+
+.dashboard .headline .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.dashboard .headline .detail h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #6C5DD3;
+}
+
+.dashboard .headline .detail span {
+    color: #8d8d8d;
+    margin-top: 1rem;
+}
+
+.dashboard .headline .detail button {
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    color: #fff;
+    background-color: #6C5DD3;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: none;
 }
 
 .dashboard .sublines {
@@ -250,13 +324,77 @@ input[type="text"] {
     flex: 1;
 }
 
+.dashboard .sublines .col:last-child .box {
+    margin-right: 0;
+}
+
 .dashboard .sublines .box {
+    display: flex;
+    flex-direction: column;
     flex: 1;
+    padding: 2rem;
     background-color: #fff;
     border-radius: 0.5rem;
     margin: 0 1rem 1rem 0;
 }
 
+.dashboard .sublines .box h4 {
+    color: grey;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard .sublines .box .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dashboard .sublines .box .detail i {
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.dashboard .sublines .box .detail span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.dashboard .sublines .box button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e6e6e6;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    height: 48px;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    color: #747474;
+    font-weight: 600;
+}
+
+.dashboard .sublines .box button i {
+    margin-right: 1rem;
+}
+
+.dashboard .sublines .box button i.up {
+    color: #38D39B;
+}
+
+.dashboard .sublines .box button i.down {
+    color: #EF4A4A;
+}
+
 .dashboard .sublines .box:last-child {
     margin-bottom: 0;
+}
+
+.results {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 0.5rem;
 }
